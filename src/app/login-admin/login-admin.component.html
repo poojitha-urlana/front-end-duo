@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="login-container">
+  <h2>Admin Login</h2>
+  <div class="input-data">
+    <input id="adminUsername" type="text" [(ngModel)]="username" required />
+    <label for="adminUsername">Admin Username</label>
+  </div>
+  <div class="input-data">
+    <input id="adminPassword" type="password" [(ngModel)]="password" required />
+    <label for="adminPassword">Admin Password</label>
+  </div>
+  <button (click)="login()" class="submit-btn">
+    <span class="input-data">LOGIN</span>
+  </button>
+  <p>
+    Don't have an account? <a routerLink="/register-admin">Register</a>
+  </p>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,29 @@
+/* Page Container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up the full height */
+  background-color: #f5f5f5; /* Light Gray Background */
+}
+
+/* Header */
+app-header {
+  background-color: #37414b; /* Dark Blue-Grey */
+  color: #ffffff; /* White Text */
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Footer */
+app-footer {
+  background-color: #37414b; /* Dark Blue-Grey */
+  color: #ffffff; /* White Text */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}

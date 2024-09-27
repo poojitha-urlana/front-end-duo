@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="register-container">
+  <h2>Admin Registration</h2>
+  <div class="input-data">
+    <input id="firstName" type="text" [(ngModel)]="firstName" required />
+    <label for="firstName">First Name</label>
+  </div>
+  <div class="input-data">
+    <input id="lastName" type="text" [(ngModel)]="lastName" required />
+    <label for="lastName">Last Name</label>
+  </div>
+  <div class="input-data">
+    <input id="email" type="email" [(ngModel)]="email" required />
+    <label for="email">Email</label>
+  </div>
+  <div class="input-data">
+    <input id="password" type="password" [(ngModel)]="password" required />
+    <label for="password">Password</label>
+  </div>
+  <button  class="submit-btn">
+    <span class="input-data">REGISTER</span>
+  </button>
+  <p>
+    Already have an account? <a routerLink="/login-admin">Login</a>
+  </p>
+</div>
+<app-footer></app-footer>

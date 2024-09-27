@@ -1,0 +1,48 @@
+<app-user-dashboard-header class="header"></app-user-dashboard-header>
+<div class="dashboard-container">
+
+  <div class="dashboard-content">
+    <app-sidenavbar-user></app-sidenavbar-user>
+    
+    <div class="main-content">
+      <div class="container">
+        <section class="disease-detection">
+          <h2>Disease Detection</h2>
+          
+          <div class="upload-area">
+            <h3>Upload Crop Image</h3>
+            
+            <label for="fileUpload" class="sr-only">Upload Crop Image</label>
+            <input id="fileUpload" type="file" (change)="onFileChange($event)" accept="image/*" aria-label="Upload Crop Image" />
+            <button (click)="analyzeImage()">Analyze</button>
+          </div>
+          
+          <div class="results-area" *ngIf="analysisResults">
+            <h3>Analysis Results</h3>
+            <p><strong>Detected Diseases:</strong></p>
+            <ul>
+              <li *ngFor="let disease of analysisResults.diseases">
+                {{ disease.name }} - Severity: {{ disease.severity }}
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="disease-recommendations" *ngIf="recommendations">
+          <h2>Treatment Recommendations</h2>
+          
+          <div class="recommendations-list">
+            <h3>Recommended Actions</h3>
+            <ul>
+              <li *ngFor="let recommendation of recommendations">
+                <h4>{{ recommendation.disease }}</h4>
+                <p><strong>Organic Treatments:</strong> {{ recommendation.organic }}</p>
+                <p><strong>Chemical Treatments:</strong> {{ recommendation.chemical }}</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

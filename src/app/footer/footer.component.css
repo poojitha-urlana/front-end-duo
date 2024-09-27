@@ -1,0 +1,30 @@
+footer {
+  background-color: #37414b; /* Blue-green (dark blue-grey) background */
+  color: white; /* White text */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #96be25; /* Green color on hover */
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}

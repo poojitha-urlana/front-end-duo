@@ -1,0 +1,114 @@
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #F5F5F5; 
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+app-sidenavbar-user {
+  width: 250px; 
+  background-color: #96be25; 
+  color: #ffffff; 
+  height: 100%;
+  position: fixed;
+  top: 10;
+  left: 0;
+  padding: 20px;
+}
+
+.main-content {
+  margin-left: 270px; 
+  padding: 20px;
+  width: calc(100% - 270px);
+}
+
+.container {
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #96be25; 
+}
+
+.upload-area {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#fileUpload {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #96be25; 
+  color: #ffffff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7a9e1f; 
+}
+
+.results-area {
+  margin-top: 20px;
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.recommendations-list {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #37414b; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li h4 {
+  font-size: 1.2rem;
+  color: #96be25; 
+}
+
+p {
+  font-size: 1rem;
+  color: #37414b;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

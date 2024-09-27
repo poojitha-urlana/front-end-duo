@@ -1,0 +1,29 @@
+<app-user-dashboard-header></app-user-dashboard-header>
+<div class="dashboard-container">
+  <div class="dashboard-content">
+    <app-sidenavbar-user></app-sidenavbar-user>
+    <div class="farms-container">
+      <header class="page-header">
+        <h2>Farms</h2>
+      </header>
+      <div class="filter-container">
+        <label for="locationFilter">Filter by Location:</label>
+        <select id="locationFilter" [(ngModel)]="selectedLocation" (change)="filterFarmsByLocation()">
+          <option value="">All</option>
+          <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+        </select>
+      </div>
+
+      <div class="farms-content">
+      
+        <section class="farm-list">
+          <h3>Farm List</h3>
+          <div class="farm-list-item" *ngFor="let farm of filteredFarms" (click)="viewFarmDetails(farm.id)">
+            <h4>{{ farm.name }}</h4>
+            <p>Location: {{ farm.location }}</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
