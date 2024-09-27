@@ -8,7 +8,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #37414b, #96be25); /* Gradient background */
+  background: url('/assets/img1.jpg') no-repeat center center/cover, 
+              linear-gradient(to right, #37414b, #96be25); /* Background image with gradient overlay */
   color: #ffffff;
   text-align: center;
   padding: 100px 20px;
@@ -18,7 +19,9 @@ body {
   justify-content: center;
   align-items: center;
   transition: background 0.3s ease-in-out;
+  background-size: cover;
 }
+
 .hero-section.scrolled {
   background-color: #3A78E3;  /* Gradient background */
 }
