@@ -1,15 +1,15 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div class="login-container">
   <h2>User Login</h2>
   <div class="input-data">
-    <input id="username" type="text" [(ngModel)]="name" required />
+    <input id="username" type="text" [(ngModel)]="username" required />
     <label for="username">User Name</label>
   </div>
   <div class="input-data">
     <input id="userPassword" type="password" [(ngModel)]="password" required />
     <label for="userPassword">User Password</label>
   </div>
-  <button (click)="login()" class="submit-btn">
+  <button (click)="handleLogin()" class="submit-btn">
     <span class="input-data">
      LOGIN
     </span>

@@ -9,6 +9,7 @@ import { CropHealthComponent } from './crop-health/crop-health.component';
 import { FarmsComponent } from './farms/farms.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { LogoutComponent } from './logout/logout.component';
 
 import { FarmdetailsComponent } from './farmdetails/farmdetails.component';
 
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route opens HomeComponent
   { path: 'login-user', component: LoginUserComponent },
   { path: 'login-admin', component: LoginAdminComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'dashboard-user', component: DashboardUserComponent },
   { path: 'dashboard-admin', component: DashboardAdminComponent },
   { path: 'crop-health', component: CropHealthComponent },

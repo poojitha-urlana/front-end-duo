@@ -1,4 +1,4 @@
-<app-user-dashboard-header class="header"></app-user-dashboard-header>
+<!-- <app-user-dashboard-header class="header"></app-user-dashboard-header> -->
 <div class="dashboard-container">
 
   <div class="dashboard-content">
@@ -13,13 +13,15 @@
             <h3>Upload Crop Image</h3>
             
             <label for="fileUpload" class="sr-only">Upload Crop Image</label>
-            <input id="fileUpload" type="file" (change)="onFileChange($event)" accept="image/*" aria-label="Upload Crop Image" />
-            <button (click)="analyzeImage()">Analyze</button>
+            <input id="fileUpload" type="file" (change)="onFileChange($event)" accept="image/*" aria-label="Upload Crop Image" /><br/><br/>
+            <button (click)="analyzeImage()" class="btn">Analyze</button>
           </div>
-          
+          <div class="image-container">
+            <img src="assets/Design.png" alt="img"  class="image">
+          </div>
           <div class="results-area" *ngIf="analysisResults">
             <h3>Analysis Results</h3>
-            <p><strong>Detected Diseases:</strong></p>
+            <p>Detected Diseases:q</p>
             <ul>
               <li *ngFor="let disease of analysisResults.diseases">
                 {{ disease.name }} - Severity: {{ disease.severity }}
