@@ -2,8 +2,8 @@
   <div class="container">
     <a class="logo" routerLink="/"><img src="assets/icon.png" id="image">Smart Farming</a>
     <nav class="nav">
-      <a class="nav-link"  *ngIf="!hardcodedAuthenticationService.isUserLoggedin()"  routerLink="/login-user">User Login</a>
-      <a class="nav-link" *ngIf="!hardcodedAuthenticationService.isUserLoggedin()" routerLink="/login-admin">&#64;Admin Login</a>
+      <a class="nav-link"  *ngIf="!hardcodedAuthenticationService.isUserLoggedin()"  [routerLink]="['/login-user']">User Login</a>
+      <a class="nav-link" *ngIf="!hardcodedAuthenticationService.isUserLoggedin()" [routerLink]="['/login-admin']">Admin Login</a>
       <a *ngIf="hardcodedAuthenticationService.isUserLoggedin()" [routerLink]="['/logout']" class="nav-link">Logout</a>
     </nav>
   </div>
