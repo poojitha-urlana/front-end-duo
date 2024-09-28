@@ -1,5 +1,5 @@
 import { Component, HostListener, Renderer2, ElementRef } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
@@ -9,7 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-home-content',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent, FontAwesomeModule],
+  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent, FontAwesomeModule ,RouterModule],
   templateUrl: './home-content.component.html',
   styleUrls: ['./home-content.component.css']  
 })
