@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HardcodedAuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-sidenavbar-user',
@@ -9,5 +10,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidenavbar-user.component.css'
 })
 export class SidenavbarUserComponent {
-
+  constructor(public hardcodedAuthenticationService: HardcodedAuthenticationService) {}
 }
