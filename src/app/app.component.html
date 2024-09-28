@@ -1,4 +1,10 @@
 <app-header></app-header>
-  <router-outlet></router-outlet>
- 
+<div class="dashboard-container">
+  <aside class="dashboard-navbar" *ngIf="showSidebar">
+    <app-sidenavbar-user></app-sidenavbar-user>
+  </aside>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
 

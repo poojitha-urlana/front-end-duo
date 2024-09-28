@@ -11,6 +11,8 @@ h1, h2, h3 {
   margin: 0;
   padding: 0;
   color: #37414b;
+}.heading{
+  color: #fff;
 }
 
 /* Hero Section */

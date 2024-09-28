@@ -1,4 +1,9 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .dashboard-container {
   display: flex;
   height: 100vh;
@@ -15,25 +20,18 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-}.upload-area{
+}.upload-area {
   text-align: left;
-  margin-top: 100px;
+  margin-top: 30px;
   
 }
-
-app-sidenavbar-user {
-  width: 250px; 
-  background-color: #96be25; 
-  color: #ffffff; 
-  height: 100%;
-  position: fixed;
-  top: 10;
-  left: 0;
-  padding: 20px;
+app-sidenavbar-user{
+  padding-bottom: 100%;
 }
 
 .main-content {
-  margin-left: 270px; 
+  margin-left: 100px; 
+  margin-top: 50px;
   padding: 20px;
   width: calc(100% - 270px);
 }
@@ -52,10 +50,6 @@ h2 {
   
 }.h3{
   text-align: left;
-}.btn{
-  /* margin-top: px;
-  margin-right: 800px; */
-
 }
 
 .upload-area {
