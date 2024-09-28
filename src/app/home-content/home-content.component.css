@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -6,14 +6,16 @@ body {
   background-color: #f9f9f9;
   animation: fadeIn 1.5s ease-in-out;
 }
-
-h1, h2, h3 {
+h1{
+  color: #fff;
+}
+ h2, h3 {
   margin: 0;
   padding: 0;
   color: #37414b;
 }
 
-/* Hero Section */
+
 .hero-section {
   background: linear-gradient(rgba(86, 87, 42, 0.5), rgba(236, 240, 187, 0)), url('/assets/farm.jpg') no-repeat center center;
   background-size: cover;
@@ -48,7 +50,7 @@ h1, h2, h3 {
 }
 
 
-/* Project Info Section */
+
 .project-info {
   background-color: #f9f9f9;
   padding: 60px 0;
@@ -111,7 +113,7 @@ h1, h2, h3 {
   color: #74931d;
 }
 
-/* Advanced Features Section */
+
 .advanced-features {
   margin: 40px 20px;
   padding: 40px 20px;
@@ -132,13 +134,13 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 
-/* Grid for Feature Items */
+
 .feature-grid {
  display: flex;
  
 }
 
-/* Feature Item Styling */
+
 .feature-item {
   width: 200px;
   background-color: #d9f9d9;
@@ -156,14 +158,13 @@ h1, h2, h3 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Icon Styling */
 .feature-item fa-icon {
   font-size: 3em;
   color: #37414b;
   margin-bottom: 15px;
 }
 
-/* Feature Heading */
+
 .feature-item h3 {
   font-size: 1.6em;
   color: #96be25;
@@ -171,7 +172,6 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-/* Feature Description */
 .feature-item p {
   font-size: 1.1em;
   color: #37414b;
@@ -179,7 +179,7 @@ h1, h2, h3 {
 }
 
 
-/* Call to Action Section */
+
 .cta-section {
   display: flex;
   align-items: center;
@@ -224,7 +224,7 @@ h1, h2, h3 {
 }
 
 
-/* Animations */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -246,38 +246,39 @@ h1, h2, h3 {
   }
 }
 
-/* Mobile Styles (max-width: 480px) */
+
 @media (max-width: 480px) {
   body {
-    font-size: 14px; /* Adjust base font size */
+    font-size: 14px; 
   }
 
   .hero-section {
-    padding: 80px 10px; /* Reduced padding */
+    padding: 80px 10px;
   }
 
   .hero-section h1 {
-    font-size: 3.5rem; /* Smaller heading */
+    font-size: 3.5rem; 
   }
 
   .hero-section h2 {
-    font-size: 1.5rem; /* Smaller subheading */
+    font-size: 1.5rem; 
   }
 
   .hero-section p {
-    font-size: 1rem; /* Smaller paragraph */
+    font-size: 1rem; 
   }
 
   .project-info h2 {
-    font-size: 2rem; /* Smaller project info heading */
+    font-size: 2rem; 
   }
 
   .feature-grid {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .feature-card {
-    padding: 15px; /* Adjusted padding */
+    padding: 15px; 
   }
 
   .statistics {
@@ -285,43 +286,43 @@ h1, h2, h3 {
   }
 
   .stat-item h3 {
-    font-size: 1.5rem; /* Smaller stats heading */
+    font-size: 1.5rem; 
   }
 
   .advanced-features h2 {
-    font-size: 2em; /* Smaller advanced features heading */
+    font-size: 2em; 
   }
 
   .cta-section {
-    padding: 40px 10px; /* Adjusted padding */
+    padding: 40px 10px; 
   }
 
   .cta-section h2 {
-    font-size: 2em; /* Smaller CTA heading */
+    font-size: 2em; 
   }
 
   .cta-section p {
-    font-size: 1em; /* Smaller CTA paragraph */
+    font-size: 1em; 
   }
 
   .cta-button {
-    font-size: 1em; /* Smaller button text */
-    padding: 10px 20px; /* Adjusted button padding */
+    font-size: 1em; 
+    padding: 10px 20px; 
   }
 }
 
-/* Tablet Styles (max-width: 768px) */
+
 @media (max-width: 768px) {
   body {
-    font-size: 15px; /* Adjust base font size */
+    font-size: 15px; 
   }
 
   .hero-section {
-    padding: 100px 20px; /* Reduced padding */
+    padding: 100px 20px; 
   }
 
   .hero-section h1 {
-    font-size: 4rem; /* Smaller heading */
+    font-size: 4rem; 
   }
 
   .feature-grid {
@@ -337,60 +338,62 @@ h1, h2, h3 {
   }
 
   .cta-section {
-    padding: 50px 20px; /* Adjusted padding */
+    padding: 50px 20px; 
   }
 
   .cta-section h2 {
-    font-size: 2.3em; /* Smaller CTA heading */
+    font-size: 2.3em; 
   }
 
   .cta-section p {
-    font-size: 1.1em; /* Smaller CTA paragraph */
+    font-size: 1.1em; 
   }
 
   .cta-button {
-    font-size: 1.1em; /* Adjusted button text */
+    font-size: 1.1em; 
   }
 }
 
-/* Desktop Styles (min-width: 769px) */
+
 @media (min-width: 769px) {
   body {
-    font-size: 16px; /* Base font size */
+    font-size: 16px; 
   }
 
   .feature-grid {
-    grid-template-columns: repeat(3, 1fr); /* Three column layout */
+    display: flex;
+    flex-wrap: wrap;
+
   }
 
   .feature-card {
-    padding: 25px; /* Standard padding */
+    padding: 25px; 
   }
 
   .cta-button {
-    font-size: 1.2em; /* Standard button text size */
+    font-size: 1.2em; 
   }
 }
 
-/* Large Desktop Styles (min-width: 1200px) */
+
 @media (min-width: 1200px) {
   body {
-    font-size: 17px; /* Slightly larger base font size */
+    font-size: 17px; 
   }
 
   .hero-section {
-    height: 100vh; /* Full height for large screens */
+    height: 100vh; 
   }
 
   .hero-section h1 {
-    font-size: 6rem; /* Larger heading */
+    font-size: 6rem; 
   }
 
   .project-info h2 {
-    font-size: 3rem; /* Larger project info heading */
+    font-size: 3rem; 
   }
 
   .feature-item h3 {
-    font-size: 1.8em; /* Larger feature item heading */
+    font-size: 1.8em; 
   }
 }
