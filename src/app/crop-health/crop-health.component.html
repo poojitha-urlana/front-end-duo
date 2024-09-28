@@ -2,14 +2,14 @@
 <div class="dashboard-container">
 
   <div class="dashboard-content">
-    <app-sidenavbar-user></app-sidenavbar-user>
+    <!-- <app-sidenavbar-user></app-sidenavbar-user> -->
     
     <div class="main-content">
       <div class="container">
         <section class="disease-detection">
-          <h2>Disease Detection</h2>
           
           <div class="upload-area">
+            <h2>Disease Detection</h2><br/><br/>
             <h3>Upload Crop Image</h3>
             
             <label for="fileUpload" class="sr-only">Upload Crop Image</label>
@@ -18,7 +18,10 @@
           </div>
           <div class="image-container">
             <img src="assets/Design.png" alt="img"  class="image">
-          </div>
+          </div><br/>
+        </section>
+
+        <section class="disease-recommendations" *ngIf="recommendations">
           <div class="results-area" *ngIf="analysisResults">
             <h3>Analysis Results</h3>
             <p>Detected Diseases:q</p>
@@ -28,9 +31,6 @@
               </li>
             </ul>
           </div>
-        </section>
-
-        <section class="disease-recommendations" *ngIf="recommendations">
           <h2>Treatment Recommendations</h2>
           
           <div class="recommendations-list">

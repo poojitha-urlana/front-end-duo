@@ -1,20 +1,23 @@
-
 .container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 60px); /* Adjust based on header height */
   width: 100%;
 }
 
-
 .sidenav {
   width: 250px;
+  cursor: pointer;
   background-color: #96be25; 
-  padding: 20px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
-  
 }
 
+.main-content {
+  flex: 1; /* Takes remaining space */
+  padding: 20px; /* Optional padding for main content */
+  background-color: #f8f9fa; /* Optional background color */
+}
 
 .sidenav a {
   color: white; 
@@ -27,12 +30,10 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-
 .sidenav a:hover {
   background-color: #85a91c; 
   color: #FFFFFF;
 }
-
 
 .sidenav a:focus, .sidenav a.active {
   background-color: #37414b; 

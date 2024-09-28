@@ -1,0 +1,43 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .dashboard-navbar {
+    background-color: #96be25;
+    color: #FFFFFF;
+    width: 250px; /* Fixed width for the sidebar */
+    padding-top: 60px;
+    height: 100vh; /* Full height */
+    overflow-y: auto; /* Allow scrolling */
+  }
+  
+  .main-content {
+    margin-left: 0; /* Default margin */
+    padding: 0px;
+    width: 100%; /* Full width by default */
+    transition: margin-left 0.3s; /* Smooth transition */
+  }
+  
+  /* Adjust margin when sidebar is visible */
+  .dashboard-container.show-sidebar .main-content {
+    margin-left: 50px; /* Leave space for the sidebar */
+    width: calc(100% - 250px); /* Adjust width */
+  }
+  
+  /* Optional styles for responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column; /* Stack items on smaller screens */
+    }
+    .dashboard-navbar {
+      width: 100%; /* Sidebar takes full width */
+      position: relative; /* Change to relative */
+      height: auto; /* Height becomes auto */
+    }
+    .main-content {
+      margin-left: 0; /* No left margin */
+      width: 100%; /* Full width */
+    }
+  }
+  
