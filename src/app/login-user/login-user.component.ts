@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { HardcodedAuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-login-user',
@@ -14,18 +14,29 @@ import { RouterModule } from '@angular/router';
   templateUrl: './login-user.component.html',
   styleUrls: ['./login-user.component.css']
 })
-export class LoginUserComponent {
-  name: string = '';
-  password: string = '';
+export class LoginUserComponent implements OnInit {
+  username = "poojitha";
+  password = "123456";
+  errorMessage="Invalid Credentials"
+  invalidLogin= false
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public authenticationService : HardcodedAuthenticationService) {}
 
-  login() {
+  ngOnInit(): void {}
+
+  handleLogin() {
    
-    if (this.name === 'poojitha' && this.password === '123456') {
+    if(this.authenticationService.authenticate(this.username,this.password)){
+
       this.router.navigate(['/dashboard-user']);
-    } else {
-      alert('Invalid login credentials for User');
+    }else{
+      this.invalidLogin = true
     }
+
+    // if (this.name === 'poojitha' && this.password === '123456') {
+    //   this.router.navigate(['/dashboard-user']);
+    // } else {
+    //   alert('Invalid login credentials for User');
+    // }
   }
 }

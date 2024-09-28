@@ -5,6 +5,6 @@
     <a routerLink="/farms">Farms</a>
     <a routerLink="/crop-health">Crop Health</a>
     <a routerLink="/settings">Settings</a>
-    <a routerLink="/logout">Logout</a>
+    <a *ngIf="hardcodedAuthenticationService.isUserLoggedin()" [routerLink]="['/logout']" class="nav-link">Logout</a>
   </nav>
 </div>

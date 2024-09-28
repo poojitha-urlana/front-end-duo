@@ -2,13 +2,23 @@
 .dashboard-container {
   display: flex;
   height: 100vh;
-  background-color: #F5F5F5; 
+}.disease-detection{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  text-align: center;
 }
-
+.disease-detection h2{
+  text-align: center;
+}
 .dashboard-content {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+}.upload-area{
+  text-align: left;
+  margin-top: 100px;
+  
 }
 
 app-sidenavbar-user {
@@ -38,6 +48,14 @@ app-sidenavbar-user {
 h2 {
   font-size: 2rem;
   color: #96be25; 
+  text-align: center;
+  
+}.h3{
+  text-align: left;
+}.btn{
+  /* margin-top: px;
+  margin-right: 800px; */
+
 }
 
 .upload-area {
@@ -71,6 +89,10 @@ button:hover {
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 5px;
+}
+
+.results-area p{
+  text-align: center;
 }
 
 .recommendations-list {
@@ -111,4 +133,12 @@ p {
     margin-left: 0;
     width: 100%;
   }
+}
+.image{
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+}.image-container{
+  width: 450px;
+  height: 450px;
 }
