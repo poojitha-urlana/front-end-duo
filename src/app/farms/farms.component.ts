@@ -21,7 +21,7 @@ export class FarmsComponent {
       area: 50, 
       cropName: 'Corn',
       sensors: {
-        temperature: { value: 24, status: 'Normal' },
+        temperature: { value: 22, status: 'Normal' },
         humidity: { value: 60, status: 'Normal' },
         moisture: { value: 30, status: 'Low' }
       }
@@ -68,6 +68,6 @@ export class FarmsComponent {
 
   viewFarmDetails(farmId: number) {
     const farm = this.farms.find(f => f.id === farmId);
-    this.router.navigate([`/farm/${farmId}`], { state: { farm } }); // Pass farm data to the details page
+    this.router.navigate([`/farm/${farmId}`], { state: { farm } }); // Corrected string interpolation for routing
   }
 }
