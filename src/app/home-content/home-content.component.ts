@@ -1,37 +1,80 @@
-import { Component, HostListener, Renderer2, ElementRef } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Renderer2, ElementRef, AfterViewInit, Inject, PLATFORM_ID, HostListener } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-content',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent, FontAwesomeModule ,RouterModule],
+  imports: [CommonModule, FontAwesomeModule, HeaderComponent, FooterComponent, RouterModule],
   templateUrl: './home-content.component.html',
-  styleUrls: ['./home-content.component.css']  
+  styleUrls: ['./home-content.component.css']
 })
-export class HomeContentComponent  {
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+export class HomeContentComponent implements AfterViewInit {
+  activeColor: string = 'black';
+  throttled: boolean = false;  // Declare the throttled property
+  sections = [
+    { id: 'project-info', color: '#f9f9f9' },
+    { id: 'advanced-features', color: '#37414b' },
+    { id: 'cta-section', color: '#f1f0f1' },
+  ];
 
-  // Listen to the window scroll event
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollPosition = window.pageYOffset; // Current vertical scroll position
-    console.log('Scroll Position:', scrollPosition);
+  constructor(
+    private renderer: Renderer2, 
+    private el: ElementRef, 
+    @Inject(PLATFORM_ID) private platformId: any // Inject PLATFORM_ID to detect platform
+  ) {}
 
-    // Get the offset position of the advanced features section
-    const advancedFeaturesSection = this.el.nativeElement.querySelector('.advanced-features').offsetTop;
-    console.log('Advanced Features Offset:', advancedFeaturesSection);
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {  // Ensure code runs only in the browser
+      console.log('ngAfterViewInit called');
 
-    if (scrollPosition >= advancedFeaturesSection / 2) {
-      console.log('Adding scrolled class');
-      this.renderer.addClass(this.el.nativeElement.querySelector('.hero-section'), 'scrolled');
-    } else {
-      console.log('Removing scrolled class');
-      this.renderer.removeClass(this.el.nativeElement.querySelector('.hero-section'), 'scrolled');
+      // Initially update background colors based on panel's data-color
+      const panels = this.el.nativeElement.querySelectorAll('.panel');
+      panels.forEach((panel: HTMLElement) => {
+        const color = panel.getAttribute('data-color');
+        if (color) {
+          this.renderer.setStyle(panel, 'background-color', color);
+        } else {
+          console.warn('No data-color defined for this panel:', panel);
+        }
+      });
     }
   }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    if (!this.throttled) {
+      this.throttled = true;
+      setTimeout(() => {
+        this.detectActivePanel();
+        this.throttled = false;
+      }, 100); // Adjust this timeout to control the throttling
+    }
+  }
+  
+  private detectActivePanel() {
+    const scrollPosition = window.scrollY + window.innerHeight / 2; // Adjusted buffer zone
+  
+    const panels = this.el.nativeElement.querySelectorAll('.panel');
+    const body = this.el.nativeElement.ownerDocument.body;
+  
+    let activePanelFound = false;
+  
+    panels.forEach((panel: HTMLElement) => {
+      const panelTop = panel.offsetTop;
+      const panelHeight = panel.offsetHeight;
+      const panelColor = panel.getAttribute('data-color') || '#ffffff';
+  
+      if (!activePanelFound && panelTop <= scrollPosition && (panelTop + panelHeight) > scrollPosition) {
+        // Change background color and stop further checks
+        this.renderer.setStyle(body, 'background-color', panelColor);
+        activePanelFound = true;
+      }
+    });
+  }
+  
 }

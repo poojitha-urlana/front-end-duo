@@ -1,6 +1,7 @@
 <header class="header">
   <div class="container">
-    <a class="logo" routerLink="/" >Smart Farming</a>
+    <a class="logo" routerLink="/" 
+    >Smart Farming</a>
     <nav class="nav">
       <a class="nav-link"  *ngIf="!hardcodedAuthenticationService.isUserLoggedin()"  [routerLink]="['/login-user']"><fa-icon [icon]="faUser"></fa-icon> User Login</a>
       <a class="nav-link" *ngIf="!hardcodedAuthenticationService.isUserLoggedin()" [routerLink]="['/login-admin']"><fa-icon [icon]="faSignInAlt"></fa-icon> Admin Login</a>
