@@ -73,7 +73,7 @@ h1{
 
 
 .project-info {
- /* background-color: #d9f9d9;  */
+  background-color: #f9f9f9;
   padding: 60px 0;
 }
 
@@ -134,8 +134,7 @@ h1{
 
 .advanced-features {
   padding: 40px 20px;
- /* background-color: #37414b; */
-  padding-bottom: 100px;
+  
 }
 
 .advanced-features h2 {
