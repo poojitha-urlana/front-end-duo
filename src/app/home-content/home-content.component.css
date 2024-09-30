@@ -133,7 +133,7 @@ h1{
 
 
 .advanced-features {
-  padding: 40px 20px;
+  padding: 20px;
   
 }
 
@@ -160,25 +160,29 @@ h1{
 
 .feature-item {
   width: 200px;
-  background-color: #d9f9d9;
+  /* background-color: #d9f9d9; */
+  background-color: #fff;
+  border: 2px solid #96be25;
   border-radius: 12px;
   padding: 25px;
   text-align: center;
-  box-shadow:0 0 25px #d9f9d9,
-  0 0 30px #586458;
+  /* box-shadow:0 0 25px #d9f9d9,
+  0 0 30px #586458; */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin: 10px;
 }
 
 .feature-item:hover {
   transform: translateY(-10px);
-  border: #74931d solid 1px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: #96be25 solid 3px;
+ box-shadow:0 0 25px #96be25,
+  0 0 30px #3da13d;
 }
 
 .feature-item fa-icon {
   font-size: 3em;
-  color: #37414b;
+  /* color: #37414b; */
+  color: #96be25;
   margin-bottom: 15px;
 }
 
@@ -192,7 +196,7 @@ h1{
 
 .feature-item p {
   font-size: 1.1em;
-  color: #37414b;
+  color: #74931d;
   margin: 0;
 }.feature-card p{
   color: #fff;
@@ -235,15 +239,15 @@ h1{
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  color: #d9f9d9;
+  color: #fff;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #d9f9d9; /* Light blue on hover d9f9d9 */
+  background-color: #96be25; /* Light blue on hover d9f9d9 */
   transform: translateY(-3px); /* Slight lift effect */
-  color: #37414b;
-  border: #37414b 2px solid;
+  color: #fff;
+  border: #fff 2px solid;
 }
 
 
