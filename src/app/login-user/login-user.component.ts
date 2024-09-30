@@ -33,10 +33,6 @@ export class LoginUserComponent implements OnInit {
       this.invalidLogin = true
     }
 
-    // if (this.name === 'poojitha' && this.password === '123456') {
-    //   this.router.navigate(['/dashboard-user']);
-    // } else {
-    //   alert('Invalid login credentials for User');
-    // }
+    
   }
 }
