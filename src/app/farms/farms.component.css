@@ -10,16 +10,7 @@
   flex-grow: 1;
 }
 
-/* app-sidenavbar-user {
-  width: 250px; 
-  background-color: #96be25; 
-  color: #ffffff;
-  height: 100%;
-  position: fixed;
-  top: 10;
-  left: 0;
-  padding: 20px;
-} */
+
 
 .farms-container {
   margin-left: 270px; /* To make room for the sidebar */

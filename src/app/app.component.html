@@ -6,10 +6,9 @@
   <aside class="dashboard-navbar" *ngIf="showAdminSidebar">
     <app-sidenavbar-admin></app-sidenavbar-admin>
   </aside>
-
 </div>
 <div class="main-content">
   <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
-
+<!-- Conditionally display footer -->
+<app-footer *ngIf="shouldShowFooter()"></app-footer>

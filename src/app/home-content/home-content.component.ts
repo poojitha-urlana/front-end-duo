@@ -3,13 +3,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-content',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, HeaderComponent, FooterComponent, RouterModule],
+  imports: [CommonModule, FontAwesomeModule, HeaderComponent, RouterModule],
   templateUrl: './home-content.component.html',
   styleUrls: ['./home-content.component.css']
 })
