@@ -23,4 +23,6 @@ export class FarmdetailsComponent implements OnInit {
     ngOnInit() {
       this.farm = history.state.farm; 
     }
+
+    
   }

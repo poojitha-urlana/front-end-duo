@@ -1,7 +1,6 @@
-
 <div class="farm-details-container">
   <div class="details-content">
-    <h2>{{ farm?.name }}</h2> <!-- Use safe navigation operator -->
+    <h2>{{ farm?.name }}</h2>
     <div class="farm-info">
       <p><strong>Area:</strong> {{ farm?.area }} acres</p>
       <p><strong>Location:</strong> {{ farm?.location }}</p>
@@ -10,22 +9,37 @@
 
     <h3>Sensor Details</h3>
     <div class="sensor-details">
-      <div class="sensor">
-        <h4>Temperature Sensor</h4>
-        <p>Value: {{ farm?.sensors?.temperature?.value }} °C</p>
-        <p>Status: {{ farm?.sensors?.temperature?.status }}</p>
+      <div class="sensor-card">
+        <div class="sensor-icon">
+          <i class="fas fa-thermometer-half"></i>
+        </div>
+        <div class="sensor-info">
+          <h4>Temperature Sensor</h4>
+          <p>Value: {{ farm?.sensors?.temperature?.value }} °C</p>
+          <p>Status: {{ farm?.sensors?.temperature?.status }}</p>
+        </div>
       </div>
 
-      <div class="sensor">
-        <h4>Humidity Sensor</h4>
-        <p>Value: {{ farm?.sensors?.humidity?.value }} %</p>
-        <p>Status: {{ farm?.sensors?.humidity?.status }}</p>
+      <div class="sensor-card">
+        <div class="sensor-icon">
+          <i class="fas fa-tint"></i>
+        </div>
+        <div class="sensor-info">
+          <h4>Humidity Sensor</h4>
+          <p>Value: {{ farm?.sensors?.humidity?.value }} %</p>
+          <p>Status: {{ farm?.sensors?.humidity?.status }}</p>
+        </div>
       </div>
 
-      <div class="sensor">
-        <h4>Moisture Content Sensor</h4>
-        <p>Value: {{ farm?.sensors?.moisture?.value }} %</p>
-        <p>Status: {{ farm?.sensors?.moisture?.status }}</p>
+      <div class="sensor-card">
+        <div class="sensor-icon">
+          <i class="fas fa-water"></i>
+        </div>
+        <div class="sensor-info">
+          <h4>Moisture Content Sensor</h4>
+          <p>Value: {{ farm?.sensors?.moisture?.value }} %</p>
+          <p>Status: {{ farm?.sensors?.moisture?.status }}</p>
+        </div>
       </div>
     </div>
   </div>

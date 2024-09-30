@@ -2,17 +2,31 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+import { SidenavbarAdminComponent } from '../sidenavbar-admin/sidenavbar-admin.component';
 import { SidenavbarUserComponent } from '../sidenavbar-user/sidenavbar-user.component';
 import { UserDashboardHeaderComponent } from '../user-dashboard-header/user-dashboard-header.component';
 
 @Component({
   selector: 'app-farms',
   standalone: true,
-  imports: [CommonModule, FormsModule, SidenavbarUserComponent, UserDashboardHeaderComponent],
+  imports: [CommonModule, 
+    SidenavbarAdminComponent,
+    FormsModule, SidenavbarUserComponent, UserDashboardHeaderComponent, HeaderComponent, FooterComponent],
   templateUrl: './farms.component.html',
   styleUrls: ['./farms.component.css'] // Corrected to styleUrls
 })
 export class FarmsComponent {
+  // Properties to control sidebar visibility
+  showSidebar: boolean = true;
+  showAdminSidebar: boolean = false; 
+  userRole: string = 'user'; // Example: 'admin' or 'user'
+
+  shouldShowFooter(): boolean {
+    return true; // Example logic for showing footer
+  }
+
   farms = [
     { 
       id: 1, 
@@ -56,7 +70,9 @@ export class FarmsComponent {
   selectedLocation = '';
   filteredFarms = this.farms;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.setSidebarVisibility(); // Set sidebar visibility based on user role
+  }
 
   filterFarmsByLocation() {
     if (this.selectedLocation) {
@@ -69,5 +85,16 @@ export class FarmsComponent {
   viewFarmDetails(farmId: number) {
     const farm = this.farms.find(f => f.id === farmId);
     this.router.navigate([`/farm/${farmId}`], { state: { farm } }); // Corrected string interpolation for routing
+  }
+
+  setSidebarVisibility() {
+    // Adjust sidebar visibility based on user role
+    if (this.userRole === 'admin') {
+      this.showAdminSidebar = true;
+      this.showSidebar = false; // Hide user sidebar
+    } else {
+      this.showSidebar = true;
+      this.showAdminSidebar = false; // Hide admin sidebar
+    }
   }
 }

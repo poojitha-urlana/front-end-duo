@@ -1,6 +1,4 @@
-.dashboard-container {
-    display: flex;
-  }
+
   
   .dashboard-navbar {
     background-color: #96be25;
@@ -24,19 +22,4 @@
     width: calc(100% - 250px); /* Adjust width */
   }
   
-  /* Optional styles for responsiveness */
-  @media (max-width: 768px) {
-    .dashboard-container {
-      flex-direction: column; /* Stack items on smaller screens */
-    }
-    .dashboard-navbar {
-      width: 100%; /* Sidebar takes full width */
-      position: relative; /* Change to relative */
-      height: auto; /* Height becomes auto */
-    }
-    .main-content {
-      margin-left: 0; /* No left margin */
-      width: 100%; /* Full width */
-    }
-  }
   
