@@ -1,0 +1,32 @@
+<div class="widget-container" (click)="onNavigate('/locate')" style="cursor: pointer;">
+    <div class="widget" id="red">
+        <div class="icon">
+            <fa-icon [icon]="faLocation"></fa-icon>
+        </div>
+        <div class="value">
+            <div class="top">32</div>
+            <div class="bottom">Locations</div>
+        </div>
+    </div>
+
+
+    <div class="widget" id="green" (click)="onNavigate('/user-management')" style="cursor: pointer;">
+        <div class="icon" >
+            <fa-icon [icon]="faUsers"></fa-icon>
+        </div>
+        <div class="value" >
+            <div class="bottom" >User Management</div>
+        </div>
+    </div>
+
+
+    <div class="widget " id="yellow" (click)="onNavigate('/farm-management')" style="cursor: pointer;">
+        <div class="icon">
+            <fa-icon [icon]="faSeedling"></fa-icon>
+        </div>
+        <div class="value">
+            <div class="bottom">Farm Management</div>
+        </div>
+    </div>
+
+</div>

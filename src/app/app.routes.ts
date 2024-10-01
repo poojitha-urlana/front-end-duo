@@ -13,6 +13,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { FarmManagemnetComponent } from './farm-managemnet/farm-managemnet.component';
 import { FarmdetailsComponent } from './farmdetails/farmdetails.component';
+import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route opens HomeComponent
@@ -27,6 +29,8 @@ export const routes: Routes = [
   { path: 'register-admin', component: RegisterAdminComponent },
   { path: 'register-user', component: RegisterUserComponent },
   { path: 'user-management', component: UserManagementComponent },
+  { path: 'add-user', component: AddUserComponent },
+  { path: 'widgets', component: TopWidgetsComponent },
   { path : 'farm-management', component: FarmManagemnetComponent},
   { path: 'farm/:id', component: FarmdetailsComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect to HomeComponent for any unknown routes
