@@ -8,8 +8,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent {
-  latitude = '-37.816279'; // Example latitude
-  longitude = '144.953735'; // Example longitude
+  latitude = '18.7812'; // Example latitude
+  longitude = '84.0936'; // Example longitude
 
   mapUrl: SafeResourceUrl;
 
