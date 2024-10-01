@@ -15,6 +15,7 @@ import { FarmManagemnetComponent } from './farm-managemnet/farm-managemnet.compo
 import { FarmdetailsComponent } from './farmdetails/farmdetails.component';
 import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { LocationComponent } from './location/location.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route opens HomeComponent
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'dashboard-user', component: DashboardUserComponent },
   { path: 'dashboard-admin', component: DashboardAdminComponent },
   { path: 'crop-health', component: CropHealthComponent },
+  { path: 'location', component: LocationComponent },
   { path: 'farms', component: FarmsComponent },
   { path: 'farm/:id', component: FarmdetailsComponent },
   { path: 'register-admin', component: RegisterAdminComponent },

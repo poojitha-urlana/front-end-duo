@@ -1,4 +1,4 @@
-<div class="widget-container" (click)="onNavigate('/locate')" style="cursor: pointer;">
+<div class="widget-container" (click)="onNavigateToLocation()" style="cursor: pointer;">
     <div class="widget" id="red">
         <div class="icon">
             <fa-icon [icon]="faLocation"></fa-icon>
@@ -20,7 +20,7 @@
     </div>
 
 
-    <div class="widget " id="yellow" (click)="onNavigate('/farm-management')" style="cursor: pointer;">
+    <div class="widget " id="yellow" (click)="onNavigate('/farm-data')" style="cursor: pointer;">
         <div class="icon">
             <fa-icon [icon]="faSeedling"></fa-icon>
         </div>
