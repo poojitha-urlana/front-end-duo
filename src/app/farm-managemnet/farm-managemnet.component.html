@@ -1,1 +1,44 @@
-<p>farm-managemnet works!</p>
+<header>
+    <h2>Farm Management</h2>
+  </header>
+  
+  <div class="farm-content">
+    <!-- List of farms -->
+    <section class="farm-list">
+      <h3>Current Farms</h3>
+      <ul>
+        <li *ngFor="let farm of farms">
+          {{ farm.name }} - {{ farm.location }} - {{ farm.area }} acres
+          <button (click)="editFarm(farm)">Edit</button>
+          <button (click)="deleteFarm(farm.id)">Delete</button>
+        </li>
+      </ul>
+    </section>
+  
+    <!-- Form for adding/updating a farm -->
+    <section class="farm-form">
+      <h3>{{ selectedFarm ? 'Edit Farm' : 'Add New Farm' }}</h3>
+      <form (submit)="addOrUpdateFarm()">
+        <label>
+          Farm Name:
+          <input [(ngModel)]="farmModel.name" name="farmName" required />
+        </label>
+        <label>
+          Location:
+          <input [(ngModel)]="farmModel.location" name="farmLocation" required />
+        </label>
+        <label>
+          Area (acres):
+          <input [(ngModel)]="farmModel.area" name="farmArea" type="number" required />
+        </label>
+        <label>
+          Crop Name:
+          <input [(ngModel)]="farmModel.cropName" name="farmCropName" required />
+        </label>
+    
+        <button type="submit">{{ selectedFarm ? 'Update Farm' : 'Add Farm' }}</button>
+        <button type="button" *ngIf="selectedFarm" (click)="cancelEdit()">Cancel</button>
+      </form>
+    </section>
+  </div>
+  

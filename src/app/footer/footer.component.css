@@ -3,9 +3,7 @@ footer {
   color: white; /* White text */
   padding: 20px;
   text-align: center;
-  position: relative;
-  width: 100%;
-  bottom: 0;
+ 
 }
 
 .footer-links {

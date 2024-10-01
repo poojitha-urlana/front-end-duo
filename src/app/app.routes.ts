@@ -11,7 +11,7 @@ import { RegisterAdminComponent } from './register-admin/register-admin.componen
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserManagementComponent } from './user-management/user-management.component';
-
+import { FarmManagemnetComponent } from './farm-managemnet/farm-managemnet.component';
 import { FarmdetailsComponent } from './farmdetails/farmdetails.component';
 
 export const routes: Routes = [
@@ -27,6 +27,7 @@ export const routes: Routes = [
   { path: 'register-admin', component: RegisterAdminComponent },
   { path: 'register-user', component: RegisterUserComponent },
   { path: 'user-management', component: UserManagementComponent },
+  { path : 'farm-management', component: FarmManagemnetComponent},
   { path: 'farm/:id', component: FarmdetailsComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect to HomeComponent for any unknown routes
 ];

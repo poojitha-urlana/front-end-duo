@@ -27,7 +27,7 @@ import { SidenavbarAdminComponent } from "./sidenavbar-admin/sidenavbar-admin.co
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  showSidebar: boolean = false;
+  showUserSidebar: boolean = false;
   showAdminSidebar: boolean = false;
   title = 'smart-farming-frontend';
 
@@ -37,26 +37,26 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Subscribe to router events to show/hide sidebars based on routes
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        const currentUrl = event.url.split('?')[0]; // Remove query params for matching
-        // Define routes for user and admin sidebars
-        this.showSidebar = ['/dashboard-user', '/farms', '/crop-health'].includes(currentUrl);
-        this.showAdminSidebar = ['/admin-dashboard', '/admin-farms', '/admin-crop-health'].includes(currentUrl);
+        const currentUrl = event.url.split('?')[0]; 
+  
+        this.showUserSidebar = ['/dashboard-user', '/farms', '/crop-health'].includes(currentUrl);
+        this.showAdminSidebar = ['/dashboard-admin', '/farm-management' , '/user-management' ].includes(currentUrl);
       }
     });
   }
 
-  // Define the isLoggedOut property and initialize it
+
   isLoggedOut = false;
 
-  // Example method to toggle the logged-out state
+  
   logOut() {
     this.isLoggedOut = true;
   }
 
-  // Check if the footer should be shown
+ 
   shouldShowFooter() {
     return !this.isLoggedOut;
   }
