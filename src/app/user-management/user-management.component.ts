@@ -20,12 +20,10 @@ export class UserManagementComponent {
   constructor(private router: Router){}
 
   updateUser(userId: number) {
-    // Logic to update the user details
     console.log('Update user with ID:', userId);
   }
 
   logoutUser(userId: number) {
-    // Use the correct variable (userId) instead of id
     this.message = `User ${userId} logged out successfully!`;
     console.log('Logout user with ID:', userId);
   }
