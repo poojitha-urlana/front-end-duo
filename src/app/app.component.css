@@ -1,26 +1,30 @@
-/* Container that holds both the sidebar and the content */
+
 .dashboard-container {
-  display: flex; /* Use flexbox to align sidebar and content horizontally */
-  height: 100vh; /* Full height to match the viewport */
+  display: flex;
+  flex: 1; 
+  height: 100vh; 
 }
 
-/* Sidebar styles */
+
 .dashboard-navbar {
-  background-color: #96be25; /* Green background */
-  color: #FFFFFF; /* White text */
-  width: 250px; /* Fixed width for the sidebar */
-  padding-top: 60px; /* Space for header */
-  height: 100vh; /* Full height of the viewport */
-  overflow-y: auto; /* Scroll if content exceeds the height */
+  background-color: #96be25;
+  color: #FFFFFF; 
+  width: 250px; 
+  padding-top: 60px; 
+  height: 100vh; 
+  overflow-y: auto; 
 }
 
 
 .main-content {
-  flex-grow: 1; /* Take up remaining space after the sidebar */
- /* Add some padding for content */
-   
-  background-color: #F5F5F5; /* Light gray background */
-  transition: margin-left 0.3s; /* Smooth transition for animations */
+  flex: 1; 
+  background-color: #F5F5F5; 
+  transition: margin-left 0.3s;
+ 
 }
 
-
+.footer {
+ 
+  width: 100%; 
+  flex-shrink: 0;
+}

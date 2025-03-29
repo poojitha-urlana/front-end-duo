@@ -9,7 +9,7 @@ export class HardcodedAuthenticationService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   authenticate(username: string, password: string): boolean {
-    if (username === "poojitha" && password === '123456') {
+    if (username === "User" && password === '123') {
       if (isPlatformBrowser(this.platformId)) {
         sessionStorage.setItem('authenticateuser', username);
       }

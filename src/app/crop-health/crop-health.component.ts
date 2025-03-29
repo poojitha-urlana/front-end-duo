@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SidenavbarUserComponent } from '../sidenavbar-user/sidenavbar-user.component';
 import { UserDashboardHeaderComponent } from '../user-dashboard-header/user-dashboard-header.component';
-
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-crop-health',
   standalone: true,
-  imports: [FormsModule , CommonModule , SidenavbarUserComponent , UserDashboardHeaderComponent],
+  imports: [FormsModule , CommonModule , SidenavbarUserComponent , UserDashboardHeaderComponent,FooterComponent],
   templateUrl: './crop-health.component.html',
   styleUrls: ['./crop-health.component.css']
 })
@@ -39,7 +39,6 @@ export class CropHealthComponent {
       ]
     };
 
-    // Mock recommendations based on the analysis
     this.recommendations = [
       {
         disease: 'Powdery Mildew',

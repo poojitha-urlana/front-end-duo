@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HardcodedAuthenticationService } from '../authentication.service';
-import { HomeContentComponent } from '../home-content/home-content.component';
+import { HomeComponent } from '../home/home.component';
 import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-logout',
   standalone: true,
-  imports: [HomeContentComponent,FooterComponent],
+  imports: [HomeComponent,FooterComponent],
   templateUrl: './logout.component.html',
   styleUrl: './logout.component.css'
 })

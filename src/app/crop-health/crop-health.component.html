@@ -13,7 +13,7 @@
             <h3>Upload Crop Image</h3>
             
             <label for="fileUpload" class="sr-only">Upload Crop Image</label>
-            <input id="fileUpload" type="file" (change)="onFileChange($event)" accept="image/*" aria-label="Upload Crop Image" /><br/><br/>
+            <input id="fileUpload" type="file" (change)="onFileChange($event)" accept="image/*" aria-label="Upload Crop Image"  class="imgBtn"/><br/><br/>
             <button (click)="analyzeImage()" class="btn">Analyze</button>
           </div>
           <div class="image-container">

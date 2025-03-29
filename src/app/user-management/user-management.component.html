@@ -2,32 +2,26 @@
 <div class="alert alert-success" *ngIf="message">{{message}}</div>
 
 <div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{user.id}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-        <td>
-          <button class="btn btn-primary" (click)="updateUser(user.id)">Update</button>
-        </td>
-
-        <td>
-          <button class="btn btn-success" (click)="logoutUser(user.id)">Logout User</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="row">
-    <button class="btn btn-success" (click)="addUser()">Add User</button>
+  <h2>User Management</h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">ID</div>
+      <div class="col col-2">Username</div>
+      <div class="col col-3">Email</div>
+      <div class="col col-4">Actions</div>
+    </li>
+    <li class="table-row" *ngFor="let user of users">
+      <div class="col col-1" data-label="ID">{{user.id}}</div>
+      <div class="col col-2" data-label="Username">{{user.username}}</div>
+      <div class="col col-3" data-label="Email">{{user.email}}</div>
+      <div class="col col-4" data-label="Actions">
+        <button (click)="updateUser(user.id)" class="updateUser">Update</button>
+        <button (click)="logoutUser(user.id)" class="logoutUser">Logout</button>
+      </div>
+    </li>
+  </ul>
+  
+  <div class="action-buttons">
+    <button (click)="addUser()" class="addUser">Add New User</button>
   </div>
 </div>

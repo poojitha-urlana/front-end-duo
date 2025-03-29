@@ -1,0 +1,22 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px; /* Match sidenav width */
+    transition: margin 0.3s ease;
+  }
+  
+  .content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px 0 0 0;
+    margin: 20px 20px 20px 0;
+  }

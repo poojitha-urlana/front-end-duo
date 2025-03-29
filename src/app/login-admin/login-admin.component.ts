@@ -13,8 +13,8 @@ import { HardcodedAuthenticationService } from '../authentication.service';
   styleUrls: ['./login-admin.component.css']
 })
 export class LoginAdminComponent {
-  username = "poojitha";
-  password = "123456";
+  username = "User";
+  password = "123";
   errorMessage="Invalid Credentials"
   invalidLogin= false
   constructor(private router: Router, public authenticationService : HardcodedAuthenticationService) {}
@@ -30,11 +30,6 @@ export class LoginAdminComponent {
       this.invalidLogin = true
     }
 
-  // login() {
-  //   if (this.username === 'poojitha' && this.password === '123456') {
-  //     this.router.navigate(['/dashboard-admin']);
-  //   } else {
-  //     alert('Invalid login credentials for Admin');
-  //   }
+
   }
 }

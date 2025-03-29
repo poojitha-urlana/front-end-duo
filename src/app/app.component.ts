@@ -29,25 +29,35 @@ import { SidenavbarAdminComponent } from "./sidenavbar-admin/sidenavbar-admin.co
 export class AppComponent implements OnInit {
   showUserSidebar: boolean = false;
   showAdminSidebar: boolean = false;
-  title = 'smart-farming-frontend';
+  showFooter: boolean = true;  // Control footer visibility
 
   constructor(library: FaIconLibrary, private router: Router) {
-    // Adding FontAwesome icon pack
     library.addIconPacks(fas);
   }
 
   ngOnInit() {
-
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const currentUrl = event.url.split('?')[0]; 
-  
+
+        // Decide when to show/hide the sidebar
         this.showUserSidebar = ['/dashboard-user', '/farms', '/crop-health'].includes(currentUrl);
-        this.showAdminSidebar = ['/dashboard-admin', '/farm-management' , '/user-management' ].includes(currentUrl);
+        this.showAdminSidebar = ['/dashboard-admin', '/farm-management', '/user-management'].includes(currentUrl);
+        
+        // Decide when to show/hide the footer
+        this.showFooter = [
+          '/dashboard-user', 
+          '/farms',
+           '/crop-health',
+           '/dashboard-admin', 
+           '/farm-management',
+            '/user-management',
+            '/login-user',
+            'login-admin'
+          ].includes(currentUrl); // Show footer on all pages except home page
       }
     });
   }
-
 
   isLoggedOut = false;
 

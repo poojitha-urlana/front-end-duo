@@ -15,8 +15,8 @@ import { HardcodedAuthenticationService } from '../authentication.service';
   styleUrls: ['./login-user.component.css']
 })
 export class LoginUserComponent implements OnInit {
-  username = "poojitha";
-  password = "123456";
+  username = "User";
+  password = "123";
   errorMessage="Invalid Credentials"
   invalidLogin= false
 

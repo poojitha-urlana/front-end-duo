@@ -1,10 +1,22 @@
 .form-group {
     margin-bottom: 15px;
+
+  }
+  .box{
+    width: 500px;
+  margin: 100px auto;
+  padding: 40px 40px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
   }
   
   input {
-    width: 100%;
+    width: 80%;
     padding: 8px;
+    background-color: #f5f5f5;
     margin-top: 5px;
     box-sizing: border-box;
   }
